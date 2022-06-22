@@ -2,28 +2,39 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="app.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Dev Cafe</title>
+    <link rel="stylesheet" href="app.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="app.js"></script>
 </head>
 
-<body>
-    <div class="flex flex-col bg-gradient-to-r from-cyan-900 to-cyan-700 h-[100vh] items-center justify-center">
+<body onload="showTime()">
+    <div class="flex flex-col bg-gradient-to-r gap-10 from-cyan-900 to-cyan-700 h-[100vh] items-center justify-center">
         <div class="flex flex-col items-center justify-center">
             <div style="font-family: 'Sacramento';"
                 class="font-semibold z-10 absolute rounded-xl drop-shadow-2xl text-7xl text-center pt-10 px-10 pb-4 italic bg-white">
                 The Dev Cafe
             </div>
-            <div class="w-[456.36px] h-[128px] bg-orange-200 ml-5 mt-5 rounded-xl">
-
+            <div class="w-[456.36px] h-[128px] bg-orange-200 ml-5 mt-5 rounded-xl"></div>
+        </div>
+        <div class="flex flex-row gap-5">
+            <div class="w-[700px] p-10 h-[400px] rounded-2xl bg-orange-50 drop-shadow-xl flex gap-10">
+                <lottie-player class="bg-white rounded-2xl hover:drop-shadow-2xl" src="https://assets2.lottiefiles.com/packages/lf20_hjfxddwh.json"
+                    background="transparent" speed="1" style="width: 150px; height: 150px;" loop autoplay>
+                </lottie-player>
+                <lottie-player class="bg-white rounded-2xl hover:drop-shadow-2xl" src="https://assets4.lottiefiles.com/packages/lf20_jJ1NZx.json"  background="transparent"  speed="1"  style="width: 150px; height: 150px;"  loop  autoplay></lottie-player>
+            </div>
+            <div class="w-[300px] h-[130px] flex-col flex items-center justify-center drop-shadow-xl rounded-2xl bg-red-50">
+                <div class="absolute mb-[73px] text-2xl px-1 mr-20 bg-red-50">
+                    Dev Clock
+                </div>
+                <div id="clockDisplay" class="pFont text-4xl pt-5 rounded-xl w-[235px] flex items-center justify-center flex-col pb-2 outline-red-500 outline" ></div>
             </div>
         </div>
-
-
-
     </div>
 </body>
 
